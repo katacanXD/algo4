@@ -8,7 +8,7 @@ using namespace std;
 class Cocktail
 {
 public:
-    static void f(vector<int>& vec) {
+    static void f(vector<int> vec) {
         std::cout << "Шейкерная сортировка" << endl;
 
         auto start = std::chrono::high_resolution_clock::now();

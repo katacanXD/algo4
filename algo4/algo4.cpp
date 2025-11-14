@@ -8,6 +8,7 @@
 #include "Selection.h"
 #include "Shell.h"
 #include "Quick.h"
+#include "BinaryInsertion.h"
 
 using namespace std;
 
@@ -23,7 +24,7 @@ int main()
 
     random_device rd;
     mt19937 gen(rd());
-    uniform_int_distribution<> dist(0, 99);
+    uniform_int_distribution<> dist(0, n*10);
 
     for (int i = 0; i < a.size(); i++) {
         a[i] = dist(gen);
@@ -67,5 +68,6 @@ int main()
         Selection::f(a);
         Shell::f(a);
         Quick::f(a);
+        BinaryInsertion::f(a);
     }
 }

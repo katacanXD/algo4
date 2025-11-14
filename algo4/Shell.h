@@ -8,7 +8,7 @@ using namespace std;
 class Shell
 {
 public:
-    static void f(vector<int>& vec) {
+    static void f(vector<int> vec) {
         cout << "Сортировка Шелла" << endl;
 
         auto start = std::chrono::high_resolution_clock::now();

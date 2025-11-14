@@ -8,7 +8,7 @@ using namespace std;
 class Bubble
 {
 public:
-	static void f(vector<int>& vec) {
+	static void f(vector<int> vec) {
 		cout << "BU BU BU" << endl;
 
         auto start = std::chrono::high_resolution_clock::now();

@@ -9,13 +9,13 @@ using namespace std;
 class Quick
 {
 public:
-    static void f(vector<int>& vec) {
+    static void f(vector<int> vec) {
         cout << "Быстрая сортировка" << endl;
 
         auto start = std::chrono::high_resolution_clock::now();
 
 
-        quickSort(vec);
+        quickSort(vec, 0, vec.size() - 1);
 
         auto end = std::chrono::high_resolution_clock::now();
         auto duration = std::chrono::duration_cast<std::chrono::nanoseconds>(end - start);
@@ -29,14 +29,11 @@ public:
     }
 
 private:
-    // Улучшенная версия с выбором среднего элемента
-    static void quickSortOptimized(vector<int>& arr, int low, int high) {
+    static void quickSort (vector<int>& arr, int low, int high) {
         if (low < high) {
-            // Выбираем средний элемент как опорный (избегаем худшего случая)
             int mid = low + (high - low) / 2;
             int pivot = arr[mid];
 
-            // Перемещаем опорный элемент в конец
             swap(arr[mid], arr[high]);
 
             int i = low - 1;
@@ -51,12 +48,8 @@ private:
             swap(arr[i + 1], arr[high]);
             int pivotIndex = i + 1;
 
-            quickSortOptimized(arr, low, pivotIndex - 1);
-            quickSortOptimized(arr, pivotIndex + 1, high);
+            quickSort(arr, low, pivotIndex - 1);
+            quickSort(arr, pivotIndex + 1, high);
         }
-    }
-
-    static void quickSort(vector<int>& arr) {
-        quickSortOptimized(arr, 0, arr.size() - 1);
     }
 };

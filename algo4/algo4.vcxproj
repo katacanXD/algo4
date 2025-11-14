@@ -124,6 +124,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="algo4.cpp" />
+    <ClCompile Include="BinaryInsertion.cpp" />
     <ClCompile Include="Bubble.cpp" />
     <ClCompile Include="Cocktail.cpp" />
     <ClCompile Include="Insertion.cpp" />
@@ -132,6 +133,7 @@
     <ClCompile Include="Shell.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BinaryInsertion.h" />
     <ClInclude Include="Bubble.h" />
     <ClInclude Include="Cocktail.h" />
     <ClInclude Include="Insertion.h" />
